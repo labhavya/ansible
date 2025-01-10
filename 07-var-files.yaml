@@ -1,0 +1,9 @@
+- name: playbook1
+  hosts: local
+  conneciton: local
+  vars_files:
+  - course.yaml
+  tasks:
+  - name: task1
+    ansible.builtin.debug:
+      msg: "course: {{ course }}; duration:{{ duration }};trainer: {{ trainer }}"
