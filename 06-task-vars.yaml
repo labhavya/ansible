@@ -7,7 +7,7 @@
     trainer: sivakumar
   tasks:
   - name: play1 and task1
-    ansible.builtin.debug:
     vars:
       course: ansible
-      msg: "course: {{ course }}; duration:{{ duration }};trainer: {{ trainer }}""
+    ansible.builtin.debug:
+    msg: "course: {{ course }}; duration:{{ duration }};trainer: {{ trainer }}""
