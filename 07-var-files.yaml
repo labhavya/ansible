@@ -1,6 +1,6 @@
 - name: playbook1
   hosts: local
-  conneciton: local
+  connection: local
   vars_files:
   - course.yaml
   tasks:
