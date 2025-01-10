@@ -1,0 +1,14 @@
+- name: playbook1
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: course
+    prompt: please enter course name
+  -name: duration
+    prompt: please enter course duration
+  -name: trainer
+    prompt: please enter trainer name
+  tasks:
+  - name: task1
+    ansible.builtin.debug:
+      msg: "course: {{ course }}; duration:{{ duration }};trainer: {{ trainer }}"
