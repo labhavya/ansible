@@ -1,6 +1,6 @@
 - name: playbook
   hosts: local
-  conneciton: local
+  connection: local
   vars:
     course: "devops AWS"
     duration: 120hrs
