@@ -1,0 +1,13 @@
+- name: playbook
+  hosts: local
+  conneciton: local
+  vars:
+    course: "devops AWS"
+    duration: 120hrs
+    trainer: sivakumar
+  tasks:
+  - name: play1 and task1
+    ansible.builtin.debug:
+    vars:
+      course: ansible
+      msg: "course: {{ course }}; duration:{{ duration }};trainer: {{ trainer }}""
