@@ -7,7 +7,7 @@
   - course.yaml
   vars_prompt:
   - name: greet
-    prompt: enter the value fir greet
+    prompt: enter the value for greet
     private: false
   tasks:
   - name: play1 and task1
