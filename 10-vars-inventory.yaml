@@ -1,0 +1,6 @@
+- name: playbook1
+  hosts: web
+  tasks:
+  - name: task1
+    ansible.builtin.debug:
+      msg: "course: {{ course }}; duration:{{ duration }};trainer: {{ trainer }}"
