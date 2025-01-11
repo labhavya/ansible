@@ -11,7 +11,7 @@
     private: false
   tasks:
   - name: play1 and task1
-    vars:
-      greet: task
+    # vars:
+    #   greet: task
     ansible.builtin.debug:
       msg: "Hello from {{ greet }}"
