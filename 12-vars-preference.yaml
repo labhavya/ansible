@@ -1,8 +1,8 @@
 - name: play1
   hosts: local
   connection: local # managoing it's own node, no need of credentials.
-  vars:
-    greet: play
+  # vars:
+  #   greet: play
   vars_files:
   - course.yaml
   # vars_prompt:
