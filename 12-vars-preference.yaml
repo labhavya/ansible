@@ -5,9 +5,9 @@
     greet: play
   vars_files:
   - course.yaml
-  vars_prompt:
-  - name: greet
-    prompt: enter the value for greet
+  # vars_prompt:
+  # - name: greet
+  #   prompt: enter the value for greet
     private: false
   tasks:
   - name: play1 and task1
