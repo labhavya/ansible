@@ -14,7 +14,7 @@
       ci: jenkins
       cloud: aws
       containeniriazation: dockor
-  taks:
+  tasks:
   - name: print course info
     ansible.builtin.debug:
       msg: " Hello from learning {{ course }} ; duration: {{ duration }} ; topics are: {{ topics }} ; is it live: {{ live }} ; tools are: {{ tools }} ; " 
