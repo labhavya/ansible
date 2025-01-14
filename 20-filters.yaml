@@ -32,9 +32,22 @@
     ansible.builtin.debug:
       msg: "course info is : {{ course | items2dict }}"
 
-  - name: convert lower to upper
+  - name: convert upper to lower
+    vars:
+      name: "Lakshmi Bhavya"
+    ansible.builtin.debug:
+      msg: "name in lower case : {{ name | lower  }}"
+
+  - name: lower to upper
     vars:
       name: "Lakshmi Bhavya"
     ansible.builtin.debug:
       msg: "name in lower case : {{ name | upper  }}"
 
+
+  - name: print min and max numbers
+    vars:
+      numbers: [ 1, 30,20,50,5,43600,10]
+    ansible.builtin.debug:
+      msg: "min number is: {{ numbers |min}}, max number is : {{  numbers | max }} "
+      
