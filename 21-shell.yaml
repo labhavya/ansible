@@ -1,0 +1,6 @@
+- name: using command and shell modes
+  hosts: local
+  connection: local
+  tasks:
+  - name: list of files.
+    ansible.builtin.command: ls -ltr > /tmp/output.txt
