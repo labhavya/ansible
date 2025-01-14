@@ -9,5 +9,5 @@
 - name: string to list
   vars:
     fruits: "apple,banaa,orange"
-  ansible.default.debug:
+  ansible.builtin.debug:
     msg: "{{ fruits }}"
