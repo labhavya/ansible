@@ -6,6 +6,16 @@
     ansible.builtin.apt:
       name: nginx
       state: present
+    when: ansible_os_family == "RedHat"
+
+- name: install nginx for ubuntu family
+  hosts: web
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.apt:
+      name: nginx
+      state: present
     when: ansible_os_family == "Ubuntu"
 
 
