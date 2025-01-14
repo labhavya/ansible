@@ -1,0 +1,7 @@
+- name: filters.
+  hosts: local
+  connection: local
+  tasks:
+  - name: handling undefined vairalbes.
+    ansible.builtin.debug:
+      msg: "{{ person }}"
