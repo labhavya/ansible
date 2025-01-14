@@ -5,7 +5,7 @@
   - name: install nginx
     ansible.builtin.dnf:
       name: nginx
-      state: present
+      state: installed
     when: ansible_distribution == "RedHat"
 
 - name: install nginx for ubuntu family
