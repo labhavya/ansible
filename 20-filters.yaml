@@ -38,5 +38,5 @@
       name: "Lakshmi Bhavya"
 
     ansible.builtin.debug:
-      msg: "name in uppear case : {{ name | lower }}"
+      msg: "name in lower case : {{ name | lower }}"
 
