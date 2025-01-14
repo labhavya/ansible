@@ -7,8 +7,7 @@
       msg: "{{ person | default ('bhavya' )}}"
 
 - name: string to list
-  ansible.builtin.debug:
   vars:
     fruits: "apple, banaa, orange"
-  
+  ansible.builtin.debug:
     msg: "fruits are: {{ fruits }}"
