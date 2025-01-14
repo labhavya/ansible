@@ -8,6 +8,6 @@
 
 - name: string to list
   vars:
-    fruits: "apple,banaa,orange"
+    fruits: "apple, banaa, orange"
   ansible.builtin.debug:
-    msg: "{{ fruits }}"
+    msg: "fruits are: {{ fruits }}"
