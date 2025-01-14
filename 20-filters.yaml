@@ -10,4 +10,4 @@
   vars:
     fruits: "apple,banaa,orange"
   ansible.default.debug:
-    msg: "{{ fruits }}""
+    msg: "{{ fruits }}"
