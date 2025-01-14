@@ -4,4 +4,4 @@
   tasks:
   - name: handling undefined vairalbes.
     ansible.builtin.debug:
-      msg: "{{ person }}"
+      msg: "{{ person | default ('bhavya' )}}"
