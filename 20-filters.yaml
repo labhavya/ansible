@@ -1,4 +1,5 @@
-- name: filters.
+#functions are called as filters here.
+- name: filters
   hosts: local
   connection: local
   tasks:
@@ -33,6 +34,8 @@
       msg: "course info is : {{ course | items2dict }}"
 
   - name: convert upper to lower
+    tags:
+    - uppertolower
     vars:
       name: "Lakshmi Bhavya"
     ansible.builtin.debug:
