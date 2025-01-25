@@ -1,0 +1,22 @@
+- name: create ec2 and configure route 53 record
+  host: local
+  connection: local
+  vars:
+  subnet_id: subnet-0ad95c9d354678e08
+  sg_id: sg-000c425d27de83849
+  ami_id: ami-09c813fb71547fc4f
+  instance_type: t3.micro
+  instances:
+  - mysql
+  - backend
+  - frontend
+  tasks:
+  - name: Create EC2 instance with termination protection turned on
+    amazon.aws.ec2_instance:
+    name: "{{ item }}"
+    vpc_subnet_id: "{{ subnet_id }}" 
+    instance_type: "{{ instance_type }}"
+    image_id: "{{ ami_id }}"
+    security_group: "{{ sg_id }}"
+    loop: "{{ instances }}"
+    
