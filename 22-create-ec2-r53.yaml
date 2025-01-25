@@ -2,14 +2,14 @@
   hosts: local
   connection: local
   vars:
-  subnet_id: subnet-0ad95c9d354678e08
-  sg_id: sg-000c425d27de83849
-  ami_id: ami-09c813fb71547fc4f
-  instance_type: t3.micro
-  instances:
-  - mysql
-  - backend
-  - frontend
+   subnet_id: subnet-0ad95c9d354678e08
+   sg_id: sg-000c425d27de83849
+   ami_id: ami-09c813fb71547fc4f
+   instance_type: t3.micro
+   instances:
+   - mysql
+   - backend
+   - frontend
   tasks:
   - name: install AWS python libraries
     ansible.builtin.pip:
