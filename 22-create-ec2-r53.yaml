@@ -11,6 +11,14 @@
   - backend
   - frontend
   tasks:
+  - name: install AWS python libraries
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - boto3
+    - botocore
+    
   - name: Create EC2 instance with termination protection turned on
     amazon.aws.ec2_instance:
     name: "{{ item }}"
