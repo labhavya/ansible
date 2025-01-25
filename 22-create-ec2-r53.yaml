@@ -1,5 +1,5 @@
 - name: create ec2 and configure route 53 record
-  host: local
+  hosts: local
   connection: local
   vars:
   subnet_id: subnet-0ad95c9d354678e08
@@ -18,7 +18,7 @@
     loop:
     - boto3
     - botocore
-    
+
   - name: Create EC2 instance with termination protection turned on
     amazon.aws.ec2_instance:
     name: "{{ item }}"
