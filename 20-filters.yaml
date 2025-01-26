@@ -24,6 +24,8 @@
     ansible.builtin.debug:
       msg: "course info is : {{ course | dict2items }}"
 
+#sample output: "msg": "course info is : [{'key': 'name', 'value': 'devops'}, {'key': 'duration', 'value': '120hrs'}, {'key': 'trainer', 'value': 'siva\"'}]"
+
       
   - name: convert list to map
     tags:
@@ -36,6 +38,8 @@
 
     ansible.builtin.debug:
       msg: "course info is : {{ course | items2dict }}"
+
+#sample output: "msg": "course info is : {'name': 'devops', 'duration': '120hrs', 'trainer': 'siva'}"
 
   - name: convert upper to lower
     tags:
@@ -65,3 +69,4 @@
       msg: "checking if ip is valid: {{ ip | ansible.utils.ipaddr }}"
   
       
+#run ansible playbook based on tags: ansible-playbook example.yml --tags "tag1,tag3" --skip-tags "tag4"
