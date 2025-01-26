@@ -14,6 +14,8 @@
       msg: "fruits are: {{ fruits | split (' , ')}}"
 
   - name: map to list
+    tags:
+    - M2L
     vars:
       course: 
         name: devops
@@ -24,6 +26,8 @@
 
       
   - name: convert list to map
+    tags:
+    - L2M
     vars:
       course: 
         - {'key': 'name', 'value': 'devops'}
