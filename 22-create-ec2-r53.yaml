@@ -39,15 +39,14 @@
       msg: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
   
-  - name: create route 53 record
+  - name: create private ip r53 records
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.item }}.{{ zone }}"
+      record: "{{ item.item}}.{{ zone }}"
       type: A
-      tt1: 1
+      ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
       overwrite: true
     loop: "{{ ec2_info.results }}"
-
