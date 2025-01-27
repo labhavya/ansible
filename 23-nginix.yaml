@@ -12,4 +12,4 @@
     - run
     ansible.builtin.service:
       name: nginx
-      statE: enabled
+      state: enabled
